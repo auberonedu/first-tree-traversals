@@ -75,63 +75,63 @@ public class TraversalPracticeTest {
         assertEquals(expected, lines);
     }
 
-    // // Tests for printNegativeNodesInOrder
+    // Tests for printNegativeNodesInOrder
 
-    // @Test
-    // public void testPrintNegativeNodesInOrder_ComplexTree() {
-    //     TreeNode node = new TreeNode(-3,
-    //         new TreeNode(4,
-    //             new TreeNode(1001),
-    //             new TreeNode(9999,
-    //                 new TreeNode(8888, null, new TreeNode(-2)),
-    //                 new TreeNode(7777)
-    //             )
-    //         ),
-    //         new TreeNode(5000,
-    //             new TreeNode(-9, new TreeNode(-5), null),
-    //             new TreeNode(-3000)
-    //         )
-    //     );
-    //     String output = captureOutput(() -> TraversalPractice.printNegativeNodesInOrder(node));
-    //     List<String> lines = getLines(output);
-    //     List<String> expected = Arrays.asList("-2", "-3", "-5", "-9", "-3000");
-    //     assertEquals(expected, lines);
-    // }
+    @Test
+    public void testPrintNegativeNodesInOrder_ComplexTree() {
+        TreeNode node = new TreeNode(-3,
+            new TreeNode(4,
+                new TreeNode(1001),
+                new TreeNode(9999,
+                    new TreeNode(8888, null, new TreeNode(-2)),
+                    new TreeNode(7777)
+                )
+            ),
+            new TreeNode(5000,
+                new TreeNode(-9, new TreeNode(-5), null),
+                new TreeNode(-3000)
+            )
+        );
+        String output = captureOutput(() -> TraversalPractice.printNegativeNodesInOrder(node));
+        List<String> lines = getLines(output);
+        List<String> expected = Arrays.asList("-2", "-3", "-5", "-9", "-3000");
+        assertEquals(expected, lines);
+    }
 
-    // @Test
-    // public void testPrintNegativeNodesInOrder_SingleNodeMatch() {
-    //     TreeNode node = new TreeNode(-5);
-    //     String output = captureOutput(() -> TraversalPractice.printNegativeNodesInOrder(node));
-    //     List<String> lines = getLines(output);
-    //     assertEquals(Collections.singletonList("-5"), lines);
-    // }
+    @Test
+    public void testPrintNegativeNodesInOrder_SingleNodeMatch() {
+        TreeNode node = new TreeNode(-5);
+        String output = captureOutput(() -> TraversalPractice.printNegativeNodesInOrder(node));
+        List<String> lines = getLines(output);
+        assertEquals(Collections.singletonList("-5"), lines);
+    }
 
-    // @Test
-    // public void testPrintNegativeNodesInOrder_SingleNodeNoMatch() {
-    //     TreeNode node = new TreeNode(0);
-    //     String output = captureOutput(() -> TraversalPractice.printNegativeNodesInOrder(node));
-    //     List<String> lines = getLines(output);
-    //     assertTrue(lines.isEmpty());
-    // }
+    @Test
+    public void testPrintNegativeNodesInOrder_SingleNodeNoMatch() {
+        TreeNode node = new TreeNode(0);
+        String output = captureOutput(() -> TraversalPractice.printNegativeNodesInOrder(node));
+        List<String> lines = getLines(output);
+        assertTrue(lines.isEmpty());
+    }
 
-    // @Test
-    // public void testPrintNegativeNodesInOrder_NullNode() {
-    //     String output = captureOutput(() -> TraversalPractice.printNegativeNodesInOrder(null));
-    //     List<String> lines = getLines(output);
-    //     assertTrue(lines.isEmpty());
-    // }
+    @Test
+    public void testPrintNegativeNodesInOrder_NullNode() {
+        String output = captureOutput(() -> TraversalPractice.printNegativeNodesInOrder(null));
+        List<String> lines = getLines(output);
+        assertTrue(lines.isEmpty());
+    }
 
-    // @Test
-    // public void testPrintNegativeNodesInOrder_BalancedTree() {
-    //     TreeNode node = new TreeNode(-1,
-    //         new TreeNode(-3),
-    //         new TreeNode(-2)
-    //     );
-    //     String output = captureOutput(() -> TraversalPractice.printNegativeNodesInOrder(node));
-    //     List<String> lines = getLines(output);
-    //     List<String> expected = Arrays.asList("-3", "-1", "-2");
-    //     assertEquals(expected, lines);
-    // }
+    @Test
+    public void testPrintNegativeNodesInOrder_BalancedTree() {
+        TreeNode node = new TreeNode(-1,
+            new TreeNode(-3),
+            new TreeNode(-2)
+        );
+        String output = captureOutput(() -> TraversalPractice.printNegativeNodesInOrder(node));
+        List<String> lines = getLines(output);
+        List<String> expected = Arrays.asList("-3", "-1", "-2");
+        assertEquals(expected, lines);
+    }
 
     // // Tests for printOddNodesPreOrder
 

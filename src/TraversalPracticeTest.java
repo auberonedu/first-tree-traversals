@@ -133,62 +133,62 @@ public class TraversalPracticeTest {
         assertEquals(expected, lines);
     }
 
-    // // Tests for printOddNodesPreOrder
+    // Tests for printOddNodesPreOrder
 
-    // @Test
-    // public void testPrintOddNodesPreOrder_ComplexTree() {
-    //     TreeNode node = new TreeNode(-3,
-    //         new TreeNode(4,
-    //             new TreeNode(1001),
-    //             new TreeNode(9999,
-    //                 new TreeNode(8888, null, new TreeNode(-2)),
-    //                 new TreeNode(7777)
-    //             )
-    //         ),
-    //         new TreeNode(5000,
-    //             new TreeNode(-9, new TreeNode(-5), null),
-    //             new TreeNode(-3000)
-    //         )
-    //     );
-    //     String output = captureOutput(() -> TraversalPractice.printOddNodesPreOrder(node));
-    //     List<String> lines = getLines(output);
-    //     List<String> expected = Arrays.asList("-3", "1001", "9999", "7777", "-9", "-5");
-    //     assertEquals(expected, lines);
-    // }
+    @Test
+    public void testPrintOddNodesPreOrder_ComplexTree() {
+        TreeNode node = new TreeNode(-3,
+            new TreeNode(4,
+                new TreeNode(1001),
+                new TreeNode(9999,
+                    new TreeNode(8888, null, new TreeNode(-2)),
+                    new TreeNode(7777)
+                )
+            ),
+            new TreeNode(5000,
+                new TreeNode(-9, new TreeNode(-5), null),
+                new TreeNode(-3000)
+            )
+        );
+        String output = captureOutput(() -> TraversalPractice.printOddNodesPreOrder(node));
+        List<String> lines = getLines(output);
+        List<String> expected = Arrays.asList("-3", "1001", "9999", "7777", "-9", "-5");
+        assertEquals(expected, lines);
+    }
 
-    // @Test
-    // public void testPrintOddNodesPreOrder_SingleNodeMatch() {
-    //     TreeNode node = new TreeNode(3);
-    //     String output = captureOutput(() -> TraversalPractice.printOddNodesPreOrder(node));
-    //     List<String> lines = getLines(output);
-    //     assertEquals(Collections.singletonList("3"), lines);
-    // }
+    @Test
+    public void testPrintOddNodesPreOrder_SingleNodeMatch() {
+        TreeNode node = new TreeNode(3);
+        String output = captureOutput(() -> TraversalPractice.printOddNodesPreOrder(node));
+        List<String> lines = getLines(output);
+        assertEquals(Collections.singletonList("3"), lines);
+    }
 
-    // @Test
-    // public void testPrintOddNodesPreOrder_SingleNodeNoMatch() {
-    //     TreeNode node = new TreeNode(2);
-    //     String output = captureOutput(() -> TraversalPractice.printOddNodesPreOrder(node));
-    //     List<String> lines = getLines(output);
-    //     assertTrue(lines.isEmpty());
-    // }
+    @Test
+    public void testPrintOddNodesPreOrder_SingleNodeNoMatch() {
+        TreeNode node = new TreeNode(2);
+        String output = captureOutput(() -> TraversalPractice.printOddNodesPreOrder(node));
+        List<String> lines = getLines(output);
+        assertTrue(lines.isEmpty());
+    }
 
-    // @Test
-    // public void testPrintOddNodesPreOrder_NullNode() {
-    //     String output = captureOutput(() -> TraversalPractice.printOddNodesPreOrder(null));
-    //     List<String> lines = getLines(output);
-    //     assertTrue(lines.isEmpty());
-    // }
+    @Test
+    public void testPrintOddNodesPreOrder_NullNode() {
+        String output = captureOutput(() -> TraversalPractice.printOddNodesPreOrder(null));
+        List<String> lines = getLines(output);
+        assertTrue(lines.isEmpty());
+    }
 
-    // @Test
-    // public void testPrintOddNodesPreOrder_BalancedTree() {
-    //     TreeNode node = new TreeNode(2,
-    //         new TreeNode(3),
-    //         new TreeNode(4)
-    //     );
-    //     String output = captureOutput(() -> TraversalPractice.printOddNodesPreOrder(node));
-    //     List<String> lines = getLines(output);
-    //     assertEquals(Collections.singletonList("3"), lines);
-    // }
+    @Test
+    public void testPrintOddNodesPreOrder_BalancedTree() {
+        TreeNode node = new TreeNode(2,
+            new TreeNode(3),
+            new TreeNode(4)
+        );
+        String output = captureOutput(() -> TraversalPractice.printOddNodesPreOrder(node));
+        List<String> lines = getLines(output);
+        assertEquals(Collections.singletonList("3"), lines);
+    }
 
 
     /** The below are utility classes that help with testing. You do not need to modify them, but you can look with interest! */

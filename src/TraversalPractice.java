@@ -11,6 +11,19 @@ public class TraversalPractice {
      * @param node the root of the tree
      */
     public static void printLargeNodesPostOrder(TreeNode node) {
+        /**
+        if null : return
+        search left
+        search right
+        print data in a separated line and only > 1000
+         */
+
+         if (node == null) return;
+         printLargeNodesPostOrder(node.left);
+         printLargeNodesPostOrder(node.right);
+         if (node.data > 1000){
+         System.out.println(node.data);
+         }
 
     }
 

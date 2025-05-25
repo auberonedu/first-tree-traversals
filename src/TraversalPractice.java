@@ -11,7 +11,20 @@ public class TraversalPractice {
      * @param node the root of the tree
      */
     public static void printLargeNodesPostOrder(TreeNode node) {
+        //check
+        if (node == null) return;
 
+        //left
+        printLargeNodesPostOrder(node.left);
+
+        //right
+        printLargeNodesPostOrder(node.right);
+
+        //print
+        if (node.data > 1000) {
+            System.out.println(node.data);
+        }
+        
     }
 
     /**
@@ -25,7 +38,19 @@ public class TraversalPractice {
      * @param node the root of the tree
      */
     public static void printNegativeNodesInOrder(TreeNode node) {
+        //in-order means left print right
+        if (node == null) return;
 
+        //left
+        printNegativeNodesInOrder(node.left);
+
+        //print
+        if (node.data < 0) {
+            System.out.println(node.data);
+        }
+
+        //right
+        printNegativeNodesInOrder(node.right);
     }
 
     /**
@@ -38,6 +63,19 @@ public class TraversalPractice {
      * @param node the root of the tree
      */
     public static void printOddNodesPreOrder(TreeNode node) {
+        //PreOrder means print left right
+        if(node == null) return;
+
+        //print
+        if(node.data % 2 != 0){
+               System.out.println(node.data);
+        }
+
+        //left
+        printOddNodesPreOrder(node.left);
+
+        //right
+        printOddNodesPreOrder(node.right);
 
     }
 }

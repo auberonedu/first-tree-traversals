@@ -63,6 +63,17 @@ public class TraversalPractice {
      * @param node the root of the tree
      */
     public static void printOddNodesPreOrder(TreeNode node) {
+        //PreOrder means print left right
+        if(node == null) return;
+
+        //print
+        System.out.println(node.data);
+
+        //left
+        printLargeNodesPostOrder(node.left);
+
+        //right
+        printLargeNodesPostOrder(node.right);
 
     }
 }

@@ -18,10 +18,12 @@ public class TraversalPractice {
         printLargeNodesPostOrder(node.left);
 
         //right
-        printLargeNodesPostOrder(node.left);
+        printLargeNodesPostOrder(node.right);
 
         //print
-        System.out.println(node.data);
+        if (node.data > 1000) {
+            System.out.println(node.data);
+        }
         
     }
 

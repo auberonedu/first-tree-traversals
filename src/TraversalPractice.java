@@ -42,13 +42,15 @@ public class TraversalPractice {
         if (node == null) return;
 
         //left
-        printLargeNodesPostOrder(node);
+        printNegativeNodesInOrder(node.left);
 
         //print
-        System.out.println(node.data);
+        if (node.data < 0) {
+            System.out.println(node.data);
+        }
 
         //right
-        printLargeNodesPostOrder(node);
+        printNegativeNodesInOrder(node.right);
     }
 
     /**

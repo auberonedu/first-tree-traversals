@@ -67,13 +67,15 @@ public class TraversalPractice {
         if(node == null) return;
 
         //print
-        System.out.println(node.data);
+        if(node.data % 2 != 0){
+               System.out.println(node.data);
+        }
 
         //left
-        printLargeNodesPostOrder(node.left);
+        printOddNodesPreOrder(node.left);
 
         //right
-        printLargeNodesPostOrder(node.right);
+        printOddNodesPreOrder(node.right);
 
     }
 }

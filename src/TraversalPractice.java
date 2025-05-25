@@ -33,7 +33,13 @@ public class TraversalPractice {
      * @param node the root of the tree
      */
     public static void printNegativeNodesInOrder(TreeNode node) {
-
+        TreeNode current = node;
+        if (current == null) return;
+        printNegativeNodesInOrder(current.left);
+        if (current.data < 0) {
+            System.out.println(current.data);
+        }
+        printNegativeNodesInOrder(current.right);
     }
 
     /**

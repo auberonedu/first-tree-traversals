@@ -54,7 +54,7 @@ public class TraversalPractice {
     public static void printOddNodesPreOrder(TreeNode node) {
         TreeNode current = node;
         if (current == null) return;
-        if (current.data % 2  != 0) {
+        if (current.data % 2 != 0) {
             System.out.println(current.data);
         }
         printOddNodesPreOrder(current.left);

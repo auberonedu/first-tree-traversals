@@ -1,3 +1,5 @@
+
+
 public class TraversalPractice {
     /**
      * Prints only the values of nodes of a tree that are strictly larger than
@@ -11,6 +13,14 @@ public class TraversalPractice {
      * @param node the root of the tree
      */
     public static void printLargeNodesPostOrder(TreeNode node) {
+        if (node == null)  return;
+
+        printLargeNodesPostOrder(node.left);
+        printLargeNodesPostOrder(node.right);
+
+        if (node.data > 1000)
+            System.out.println(node.data);
+        
 
     }
 
@@ -25,6 +35,15 @@ public class TraversalPractice {
      * @param node the root of the tree
      */
     public static void printNegativeNodesInOrder(TreeNode node) {
+
+        if(node == null) return;
+
+        printNegativeNodesInOrder(node.left);
+
+        if(node.data < 0){
+            System.out.println(node.data);
+        }
+        printNegativeNodesInOrder(node.right);
 
     }
 

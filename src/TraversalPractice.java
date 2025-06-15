@@ -39,7 +39,20 @@ public class TraversalPractice {
      * @param node the root of the tree
      */
     public static void printNegativeNodesInOrder(TreeNode node) {
+        if(node == null){
+            return;
+        }
 
+        // Traverse the left subtree
+        printNegativeNodesInOrder(node.left);
+
+        // Check the current node's value
+        if(node.data < 0){
+            System.out.println(node.data);
+        }
+
+        // Traverse the right subtree
+        printNegativeNodesInOrder(node.right);
     }
 
     /**
